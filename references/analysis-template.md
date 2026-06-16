@@ -15,9 +15,32 @@ After the table, add:
 
 ## Single-Stock Memo
 
+This template is mandatory for every single-stock analysis. Do not replace it with a purely qualitative narrative. If data is unavailable, keep the field and mark it as **Data gap**.
+
 ### Conclusion
 
 Give a direct judgment first: **attractive / watchlist / avoid / insufficient evidence**.
+
+Include:
+
+- **Current judgment**:
+- **Why now / why not now**:
+- **Confidence level**:
+- **Data gaps that limit confidence**:
+
+### Current Data Snapshot
+
+| Item | Value | Source | Date |
+|---|---:|---|---|
+| Current price |  |  |  |
+| Market cap |  |  |  |
+| Enterprise value, if relevant |  |  |  |
+| Latest revenue |  |  |  |
+| Latest net profit / operating profit / FCF |  |  |  |
+| Gross margin / operating margin |  |  |  |
+| Current valuation multiple |  |  |  |
+
+If exact data is unavailable, use the best available substitute and label it clearly.
 
 ### Business Essence
 
@@ -31,14 +54,34 @@ Give a direct judgment first: **attractive / watchlist / avoid / insufficient ev
 - What does the current price seem to assume?
 - Is the market pricing growth, scarcity, optionality, recovery, or hype?
 - What would have to happen for the current valuation to be justified?
+- Is there a stronger market theme or sector absorbing capital now?
 
 ### Scenario Valuation
 
-| Scenario | Key Assumptions | Implied Value | Probability | Evidence Needed |
-|---|---|---:|---:|---|
-| Pessimistic |  |  |  |  |
-| Base |  |  |  |  |
-| Optimistic |  |  |  |  |
+| Scenario | Key Assumptions | Implied Market Cap / Value Range | Upside/Downside vs Current | Probability | Evidence Needed |
+|---|---|---:|---:|---:|---|
+| Bear |  |  |  |  |  |
+| Base |  |  |  |  |  |
+| Bull |  |  |  |  |  |
+
+Each scenario must state:
+
+- Revenue or volume assumption
+- Margin/profit/cash-flow assumption
+- Multiple, discount rate, or valuation method
+- Why the assumption is reasonable
+- What evidence would upgrade or downgrade the scenario
+
+### Risk-Reward Summary
+
+| Dimension | Assessment |
+|---|---|
+| Downside cushion |  |
+| Upside path |  |
+| Market regime support |  |
+| Competing stronger themes |  |
+| Timing quality |  |
+| Position implication, if relevant | Research support only; no deterministic instruction |
 
 ### Catalysts
 
@@ -66,6 +109,10 @@ Give a direct judgment first: **attractive / watchlist / avoid / insufficient ev
 ### Invalidation Conditions
 
 List concrete conditions that would make the thesis wrong.
+
+### Data Gap
+
+List missing current data, financial data, peer data, or source limitations. Explain how each missing item affects confidence.
 
 ### Next Research
 
