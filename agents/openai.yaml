@@ -1,7 +1,7 @@
 interface:
   display_name: "Stock Discovery Analysis"
-  short_description: "Equity idea mining and valuation analysis"
-  default_prompt: "Use $stock-discovery-analysis to screen and analyze a stock with business logic, valuation, catalysts, risks, and invalidation conditions."
+  short_description: "Single-stock analysis and candidate intake review"
+  default_prompt: "Use $stock-discovery-analysis to analyze a stock or audit a discovery candidate with business logic, evidence grading, valuation, catalysts, risks, and invalidation conditions."
 
 policy:
   allow_implicit_invocation: true

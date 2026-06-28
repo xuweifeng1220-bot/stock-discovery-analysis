@@ -146,11 +146,11 @@ For personal trade review, separate:
 - **Execution correctness**: was entry, sizing, holding, and exit consistent with the thesis?
 - **Emotional error**: did fear, FOMO, anchoring, or outside noise override the plan?
 
-## Default Conclusion Standard
+## Default Ending Standard
 
-Every stock or sector analysis must end with:
+Every stock or sector analysis must end with a final strategy section after the business, market, valuation, risk, and evidence checks are complete. Do not place this judgment before the core analysis unless the user explicitly asks for a quick verdict.
 
-- **Current judgment**: attractive, watchlist, avoid, or insufficient evidence.
+- **Final classification**: attractive, watchlist, avoid, or insufficient evidence.
 - **Why now / why not now**
 - **Main upside path**
 - **Main downside path**
