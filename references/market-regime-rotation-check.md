@@ -106,9 +106,9 @@ Emphasize:
 - Liquidity preference for leaders
 - Whether valuation already discounts perfection
 
-## Step 6: Required Conclusion
+## Step 6: Required Ending
 
-Any "worth buying now" answer must end with:
+Any "worth buying now" answer must end with a conditional timing and opportunity-cost assessment after the company and market checks are complete:
 
 - **Current market mainline**
 - **Target stock's relationship to the mainline**
@@ -116,6 +116,6 @@ Any "worth buying now" answer must end with:
 - **Capital opportunity cost**
 - **Rotation stage**
 - **Why now / why not now**
-- **Immediate buy, wait for rotation, watchlist, or avoid**
+- **Conditional strategy classification**: actionable setup / wait for rotation / watchlist / avoid / insufficient evidence
 
 Do not claim a stock is attractive solely because its own fundamentals are good. It must also pass timing, capital preference, and opportunity-cost checks.
