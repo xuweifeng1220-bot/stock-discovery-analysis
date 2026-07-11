@@ -4,25 +4,65 @@ Run this checklist before finalizing any stock discovery, single-stock memo, can
 
 ## Mandatory Acceptance Criteria
 
-For single-stock analysis, the final answer must include:
+Apply the checklist for the declared depth mode only.
 
-- Company business essence before final investment strategy, unless the user explicitly asks for a quick verdict.
-- First-principles decomposition: real demand, customer payment reason, value-chain position, unit economics, and hard-to-copy constraint.
-- Macro market and industry environment: market risk appetite, current mainline themes, stronger competing themes, industry cycle stage, and sector-relative position.
-- Current price and market cap with source/date, or a clearly labeled **Data gap**.
-- Latest revenue and profit/cash-flow/margin data, or available substitutes.
-- Bear/base/bull scenario valuation.
-- Assumptions behind each scenario.
-- Implied market cap or value range.
-- Upside/downside versus current market cap, if current market cap is available.
-- Current market expectation: what the price already seems to assume.
-- Catalysts, risks, and invalidation conditions.
-- Market mainline and opportunity-cost check when judging whether it is worth buying now.
-- Key observation indicators for business, financials, industry, capital flow, technical/execution, and catalysts.
-- Role-based debate before final strategy: Bull, Conservative, Neutral, and Portfolio Manager synthesis.
-- `Data gap` plus `Next research` when material evidence is missing.
+### Language
 
-If any item is missing and not marked as **Data gap**, the output fails QC.
+- User-facing output must be in Chinese (简体中文).
+- Fail QC if section titles or conclusions are mostly English when writing for the user.
+- Allowed English: tickers, company names, PE/EPS/FCF/ROE/EV/DCF, and mode tokens in the routing block if paired with Chinese labels.
+
+### Quick mode (single-stock)
+
+Must include:
+
+- Route block with intent, entry, depth, and references loaded
+- Verified Data Snapshot or **Data gap**
+- One-line thesis and confidence
+- Final classification: attractive / watchlist / avoid / insufficient evidence
+- Top 3 supporting reasons
+- Top 3 risks or invalidation triggers
+- Bear/base/bull range if enough data exists; otherwise **Data gap**
+- Human sign-off boundary
+
+May omit:
+
+- Full first-principles decomposition
+- Macro/industry section beyond one paragraph
+- Perspective debate
+- Parallel analyst reports
+- Long observation-indicator tables
+
+### Standard / Deep mode (single-stock)
+
+Must include:
+
+- Declared research depth and Route block
+- Verified Data Snapshot with source/date for filled fields, or clearly labeled **Data gap**
+- Dual-source validation for key financial fields when market data is fetched (`market-data-sources.md`)
+- Company business essence before final investment strategy
+- First-principles decomposition: real demand, customer payment reason, value-chain position, unit economics, and hard-to-copy constraint
+- Macro market and industry environment: market risk appetite, current mainline themes, stronger competing themes, industry cycle stage, and sector-relative position
+- Current price and market cap with source/date, or a clearly labeled **Data gap**
+- Latest revenue and profit/cash-flow/margin data, or available substitutes
+- Bear/base/bull scenario valuation with assumptions and implied value range
+- Current market expectation: what the price already seems to assume
+- Catalysts, risks, and invalidation conditions
+- Market mainline and opportunity-cost check when judging whether it is worth buying now
+- Key observation indicators for business, financials, industry, capital flow, technical/execution, and catalysts
+- Perspective debate with facilitator verdict via `perspective-debate-template.md`
+- `Data gap` plus `Next research` when material evidence is missing
+
+Deep mode must also include:
+
+- AI Researchability rating (A/B/C)
+- Parallel analyst reports
+- Perspective score table when perspectives diverge
+- Decision-memory check for repeat tickers
+
+If price or market cap is missing and the output still calls the stock cheap, expensive, attractive, or overpriced, the output fails QC.
+
+If any standard/deep item is missing and not marked as **Data gap**, the output fails QC.
 
 If the user explicitly invoked `stock-discovery-analysis`, the output also fails QC when it silently compresses the template into a partial or shortcut format without the user's consent.
 
@@ -108,6 +148,10 @@ For single-stock analysis, flag these structure errors:
 - The final investment action appears before business essence, market environment, valuation, risks, and role-based debate.
 - Macro commentary becomes generic and does not answer whether market capital is willing to buy this direction now.
 - Role-based debate appears before the core analysis or replaces valuation work.
+- Deep mode skips parallel analyst reports, AI researchability rating, or perspective debate without user consent.
+- Facilitator verdict is missing after perspective debate in standard/deep modes.
+- Route block is missing in standard/deep modes.
+- Key financial fields lack dual-source validation when sources were available.
 - Key observation indicators are missing, vague, or not connected to future buy/add/reduce/exit conditions.
 - The analysis fails to distinguish new capital from existing position handling when strategy is discussed.
 - `Data gap` is present, but `Next research` does not explain what to verify next and why it matters.
@@ -137,6 +181,9 @@ Before final output, answer:
 11. If this is Candidate Intake, did I prevent C/D evidence from promoting a candidate into the watchlist?
 12. If material evidence was missing, did I provide both `Data gap` and `Next research` instead of stopping at a generic disclaimer?
 13. Did I avoid deterministic investment advice while still providing conditional valuation ranges?
+14. In deep mode, did I include parallel analyst reports, AI researchability rating, and perspective debate?
+15. For repeat tickers, did I check decision memory or mark the absence as **Data gap**?
+16. Did I load only the references required by `skill-router.md`?
 
 ## Anti-Patterns
 

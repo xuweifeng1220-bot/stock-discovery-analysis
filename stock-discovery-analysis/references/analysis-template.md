@@ -15,11 +15,15 @@ After the table, add:
 
 ## Single-Stock Memo
 
-This template is mandatory for every single-stock analysis. Do not replace it with a purely qualitative narrative. If data is unavailable, keep the field and mark it as **Data gap**.
+This template is mandatory for every single-stock analysis. Do not replace it with a purely qualitative narrative. If data is unavailable, keep the field and mark it as **数据缺口**.
 
-If the user explicitly invokes `stock-discovery-analysis`, use the full template by default. Do not compress sections unless the user explicitly asks for a quick version.
+**All user-facing section titles, table headers, and prose must be in Chinese.** Keep English only for tickers, proper nouns, and standard finance abbreviations (PE, EPS, FCF, ROE, EV, DCF). See `SKILL.md` → Output Language.
 
-### Current Data Snapshot
+If the user explicitly invokes `stock-discovery-analysis`, use **deep** mode by default. See `references/research-depth-modes.md`. Do not compress sections unless the user explicitly asks for a quick version.
+
+### Verified Data Snapshot
+
+Complete this table before valuation judgments, over/underpriced language, or any final classification stronger than **insufficient evidence**.
 
 | Item | Value | Source | Date |
 |---|---:|---|---|
@@ -31,7 +35,44 @@ If the user explicitly invokes `stock-discovery-analysis`, use the full template
 | Gross margin / operating margin |  |  |  |
 | Current valuation multiple |  |  |  |
 
-If exact data is unavailable, use the best available substitute and label it clearly.
+Gate rules:
+
+- Every filled field must include source and date.
+- For A/H/US financial fields, prefer dual-source validation per `references/market-data-sources.md`.
+- If price or market cap is missing, do not call the stock cheap, expensive, attractive, or overpriced.
+- If key financial anchors are missing, final classification must be **insufficient evidence** or explicitly preliminary.
+- Use one consistent snapshot across all analyst channels and valuation scenarios.
+- If exact data is unavailable, use the best available substitute and label it clearly.
+
+### AI Researchability (deep mode required; standard optional)
+
+Rate before deep analysis begins:
+
+| Rating | Meaning | Strategy adjustment |
+|---|---|---|
+| **A** | Abundant public coverage | Focus on anti-consensus checks; avoid consensus restatement |
+| **B** | Moderate coverage | Label inferred fields with confidence; show dual-source diffs |
+| **C** | Scarce coverage | Use first-principles questions; do not fake report completeness |
+
+Always distinguish **AI analysis confidence** from **investment certainty**.
+
+### 0. Parallel Analyst Reports
+
+Required in **deep** mode. Optional in **standard** mode. See `references/parallel-analyst-reports.md`.
+
+Produce four independent reports before synthesis:
+
+- Fundamental Report
+- News / Macro Report
+- Sentiment Report
+- Technical / Execution Report
+
+Then add:
+
+- Cross-channel agreement:
+- Cross-channel conflict:
+- Dominant driver:
+- What would resolve the conflict:
 
 ### 1. Company Business Essence
 
@@ -143,36 +184,13 @@ List the smallest set of indicators that should be tracked after the analysis.
 | Technical/Execution |  |  |  |  |  |
 | Catalyst |  |  |  |  |  |
 
-### 5. Role-Based Debate
+### 5. Perspective Debate
 
-Use this as a pressure test before final strategy. Do not let role debate replace the core business and valuation work.
+Use `references/perspective-debate-template.md` in **standard** and **deep** modes. Do not let debate replace valuation work.
 
-#### Bull Analyst
+For **deep** mode, include the perspective score table and explicit cross-perspective conflicts.
 
-- Strongest upside thesis:
-- Evidence that supports it:
-- What the market may be missing:
-- What would confirm this view:
-
-#### Conservative Analyst
-
-- Strongest reason not to buy now:
-- Core downside risk:
-- What may already be over-priced:
-- What would make the thesis fail:
-
-#### Neutral Analyst
-
-- What is still unknown:
-- Which evidence matters most next:
-- What would change the probability weighting:
-- What should be watched before action:
-
-#### Portfolio Manager Synthesis
-
-- What is supportable from evidence:
-- What remains human judgment:
-- How the position should be treated under different evidence paths:
+For **quick** mode, skip unless the user explicitly asks for debate.
 
 ### 6. Final Investment Strategy
 
@@ -211,6 +229,16 @@ For each item, prefer:
 - what is missing
 - why it matters
 - how to verify it next
+
+### Decision Memory Update
+
+If this ticker was analyzed before, or if the user maintains local decision memory, append or update using `references/decision-memory-template.md`.
+
+At minimum state:
+
+- what changed since the last record
+- which prior assumptions held or broke
+- what lesson should carry into the next review
 
 ## Monthly Review Template
 

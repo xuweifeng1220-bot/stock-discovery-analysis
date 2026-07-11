@@ -6,6 +6,8 @@ Use this map when planning inputs for stock discovery, single-stock analysis, ea
 
 Prefer sources in this order:
 
+For concrete A-share / Hong Kong / US URLs, dual-source validation, and price-adjustment rules, read `market-data-sources.md`.
+
 1. **Primary filings and official releases**
    - Annual reports
    - Quarterly reports
