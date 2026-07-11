@@ -1,7 +1,7 @@
 interface:
   display_name: "Stock Discovery Analysis"
-  short_description: "Single-stock analysis and candidate intake review"
-  default_prompt: "Use $stock-discovery-analysis to analyze a stock or audit a discovery candidate with business logic, evidence grading, valuation, catalysts, risks, and invalidation conditions."
+  short_description: "A/H/US 投研分析：单股研究、候选承接、三情景估值"
+  default_prompt: "使用 $stock-discovery-analysis 分析标的，按 skill-router 选择深度，输出中文研报，包含商业逻辑、估值区间、风险与失效条件。"
 
 policy:
   allow_implicit_invocation: true

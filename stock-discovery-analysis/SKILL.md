@@ -1,6 +1,6 @@
 ---
 name: stock-discovery-analysis
-description: Stock discovery and equity analysis workflow for A/H/US stocks, ETFs, themes, sectors, and individual companies. Use when Codex needs to analyze a single stock, review business fundamentals, valuation, industry cycles, catalysts, technical risk controls, monthly review tables, market opportunity cost, or practitioner-informed investment reasoning. Also use to intake and audit candidates produced by stock-discovery-engine, candidate pools, task queues, pending/proposed/approved discovery outputs, or watchlist intake workflows.
+description: A/H/US stock discovery and equity analysis skill with skill-router dispatch, quick/standard/deep research modes, dual-source data validation, perspective debate, candidate intake, decision memory, and human-approved skill evolution. Use for single-stock analysis, valuation, earnings review, market regime checks, monthly review, black-swan thinking, and discovery candidate intake. Outputs default to Chinese for user-facing content.
 ---
 
 # Stock Discovery Analysis
